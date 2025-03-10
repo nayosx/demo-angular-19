@@ -1,0 +1,22 @@
+.c-card-body {
+    display: flex ;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.c-card-body-grid {
+    display: flex ;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.c-card-img {
+    width: 6rem;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
+}

@@ -1,0 +1,31 @@
+@if(CardImgText) {
+
+    @if(isGrid) {
+        <div class="u-card u-card--shadow u-d-flex u-d-flex-column u-d-flex-gap-3" [style]="{'width': '18rem'}" [ngClass]="{'u-bg-grey-30': CardImgText.isSelecteble}">
+            <img class="c-card-img" src="{{CardImgText.imgSrc}}" alt="Card image cap" />
+            <div class="c-card-body-grid">
+                <h5 class="u-card-title">{{CardImgText.title}}</h5>
+                <p class="u-card-content">{{CardImgText.description}}</p>
+                <button type="button" class="u-btn u-btn-ghots u-btn--no-width u-btn--no-height" (click)="handleClick(CardImgText)" [disabled]="CardImgText.isSelecteble">
+                    seleccionar
+                </button>
+            </div>
+        </div>
+    } @else {
+        <div class="u-card u-card--shadow u-d-flex u-d-flex-row u-d-flex-gap-3" [ngClass]="{'u-bg-grey-30': CardImgText.isSelecteble}" >
+            <img class="c-card-img" src="{{CardImgText.imgSrc}}" alt="Card image cap" />
+            <div class="c-card-body">
+                <h5 class="u-card-title">{{CardImgText.title}}</h5>
+                <p class="u-card-content">{{CardImgText.description}}</p>
+                <button type="button" class="u-btn u-btn-ghots u-btn--no-width u-btn--no-height" (click)="handleClick(CardImgText)" [disabled]="CardImgText.isSelecteble">
+                    seleccionar
+                </button>
+            </div>
+        </div>
+    }
+
+} @else {
+    <div>
+        Elemento no iniciado
+    </div>
+}

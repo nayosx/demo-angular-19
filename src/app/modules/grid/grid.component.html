@@ -1,0 +1,21 @@
+@if(isError) {
+    <div class="alert alert-danger" role="alert">
+      Error on request data
+    </div>
+  } @else {
+      @if(isLoading) {
+          <div class="u-p-all-2">
+              recuperando datos ...
+          </div>
+      } @else {
+          <div class="u-mt-4 u-p-all-2 u-d-flex u-d-flex-wrap u-d-flex-gap-2">
+              @for (card of data; track $index) {
+                  <app-card-img-text 
+                    [CardImgText]="card" 
+                    (onSelectedCard)="onSelect($event)" 
+                    [isGrid]="true"
+                    />
+              }
+          </div>
+      }
+  }
